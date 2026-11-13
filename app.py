@@ -63,29 +63,33 @@ st.markdown("""
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
+
+    /* Les <div class="metric-card"> sont ouverts et fermés dans des
+       st.markdown séparés : ils sont toujours vides. On les masque. */
     .metric-card {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        margin: 0.5rem 0;
+        display: none;
     }
+
+    /* Boîtes d'info : fond translucide + texte hérité du thème
+       => lisible en mode clair ET en mode sombre */
     .info-box {
-        background: #f0f4ff;
+        background: rgba(102, 126, 234, 0.15);
         border-left: 4px solid #667eea;
+        color: inherit;
         padding: 1rem;
         border-radius: 5px;
         margin: 1rem 0;
     }
     .success-box {
-        background: #e8f5e9;
+        background: rgba(76, 175, 80, 0.15);
         border-left: 4px solid #4caf50;
+        color: inherit;
         padding: 1rem;
         border-radius: 5px;
         margin: 1rem 0;
     }
     div[data-testid="stExpander"] {
-        border: 1px solid #e0e0e0;
+        border: 1px solid rgba(128, 128, 128, 0.3);
         border-radius: 8px;
         margin: 0.5rem 0;
     }
